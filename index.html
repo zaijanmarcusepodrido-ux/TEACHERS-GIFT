@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers' Month Gift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="numbers" id="numbers"></div>
+
+    <main class="welcome">
+
+        <div class="envelope-container">
+
+            <div class="envelope" id="envelope">
+
+                <div class="envelope-body">
+                    <div class="stamp">♥</div>
+                </div>
+
+                <div class="flap"></div>
+
+            </div>
+
+            <h1>For Our Amazing Teachers</h1>
+
+            <p class="subtitle">
+                A special message of appreciation
+            </p>
+
+            <button id="readBtn">
+                READ IT
+            </button>
+
+        </div>
+
+    </main>
+
+    <section class="letter-page" id="letterPage">
+
+        <div class="letter">
+
+            <button class="close-btn" id="closeBtn">×</button>
+
+            <div class="gift-title">
+                <h1>Teacher's Gift</h1>
+                <p>A special message made just for you</p>
+            </div>
+
+            <div class="letter-image">
+                <img
+                    src="received_1801669737498996.jpeg"
+                    alt="jpeg\image">
+            </div>
+
+            <div class="green-line"></div>
+
+            <h2>Happy Teachers' Month!</h2>
+
+            <div class="message">
+
+                <p>
+                    To our amazing teachers, thank you for your patience,
+                    guidance, kindness, and dedication just to teach us students.
+                </p>
+
+                <p>
+                    You don't just teach lessons, you inspire us to dream,
+                    learn, and become better versions of ourselves.
+                </p>
+
+                <p>
+                    Your hard work makes a difference every day.
+                    We truly appreciate everything you do for us.
+                </p>
+
+            </div>
+
+            <h3>Thank You, Dear Teachers!</h3>
+
+            <audio controls>
+                <source
+                    src="Little Einsteins - theme song (HD).mp3"
+                    type="audio/mpeg">
+            </audio>
+
+            <footer>
+                Made with gratitude for our wonderful teachers.
+            </footer>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const envelope = document.getElementById("envelope");
+        const readBtn = document.getElementById("readBtn");
+        const letterPage = document.getElementById("letterPage");
+        const closeBtn = document.getElementById("closeBtn");
+        const numbers = document.getElementById("numbers");
+
+        readBtn.addEventListener("click", function() {
+
+            envelope.classList.add("open");
+
+            setTimeout(function() {
+                letterPage.classList.add("show");
+            }, 700);
+
+        });
+
+        closeBtn.addEventListener("click", function() {
+
+            letterPage.classList.remove("show");
+
+            setTimeout(function() {
+                envelope.classList.remove("open");
+            }, 400);
+
+        });
+
+        for (let i = 0; i < 70; i++) {
+
+    const heart = document.createElement("span");
+
+    heart.textContent = "♥";
+
+    heart.style.left = Math.random() * 100 + "%";
+
+    heart.style.animationDuration =
+        (4 + Math.random() * 7) + "s";
+
+    heart.style.animationDelay =
+        Math.random() * 7 + "s";
+
+    heart.style.fontSize =
+        (10 + Math.random() * 18) + "px";
+
+    heart.style.opacity =
+        0.3 + Math.random() * 0.5;
+
+    numbers.appendChild(heart);
+
+}
+
+    </script>
+
+</body>
+</html>
